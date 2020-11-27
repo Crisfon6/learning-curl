@@ -1,0 +1,32 @@
+gedit es una aplicacion para realizar peticiones HTTP y tambien FTP 
+
+curl https://jsonplaceholder.typicode.com/posts -> esto permite hacer una peticion get a una api
+
+curl https://jsonplaceholder.typicode.com/posts -v -> te muestra informacion mucha
+
+curl https://jsonplaceholder.typicode.com/posts -i -> datos y cabecera
+
+curl -o <NOMBRE DEL ARCHIVO A CREAR CON EXTESION > https://jsonplaceholder.typicode.com/posts -> esto permite hacer un archivo con lo que me traiga la peticion
+	Example:
+		curl -o post.json https://jsonplaceholder.typicode.com/posts/1
+
+
+curl -O https://jsonplaceholder.typicode.com/posts -> con la O mayuscula hace que el nombre del archivo sea sacado de la url
+
+
+PETICIONES
+
+curl https://jsonplaceholder.typicode.com/posts -> GET
+
+curl --data "title=hello world&body=this is my first post" https://jsonplaceholder.typicode.com/posts -> POST
+
+curl -X PUT --data "title=hello" https://jsonplaceholder.typicode.com/posts/1 -> PUT
+	curl -X PUT  --data "email=hello" https://reqres.in/api/users/2 -> PUT
+
+
+curl -X DELETE https://reqres.in/api/users/2
+
+
+//FTP
+
+curl -u fazt:password123 -T <file> <route de tu server> -> para el uso del server
